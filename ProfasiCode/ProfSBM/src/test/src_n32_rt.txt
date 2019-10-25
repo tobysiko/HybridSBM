@@ -1,1 +1,0 @@
-Time_in_MC_cycles temperature Etot ExVol LocExVol Bias TorsionTerm HBMM HBMS Hydrophobicity ChargedSCInteraction NativeRestraints Ego rg rmsdA QA
