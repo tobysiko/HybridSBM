@@ -1,0 +1,15 @@
+style=linux
+indent=spaces=4
+brackets=linux
+indent-switches
+indent-namespaces
+max-instatement-indent=40
+min-conditional-indent=0
+break-blocks
+one-line=keep-statements
+one-line=keep-blocks
+convert-tabs
+preserve-date
+unpad=paren
+unpad=oper
+

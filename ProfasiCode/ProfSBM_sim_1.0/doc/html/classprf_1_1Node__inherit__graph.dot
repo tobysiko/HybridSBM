@@ -1,0 +1,30 @@
+digraph "prf::Node"
+{
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="prf::Node",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="prf::Named",height=0.2,width=0.4,color="black",URL="$classprf_1_1Named.html",tooltip="Anything that has a name."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="prf::ArginineTip",height=0.2,width=0.4,color="black",URL="$classprf_1_1ArginineTip.html",tooltip="Representation for the rigid tip of the Arginine side chain."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="prf::ATetGroup",height=0.2,width=0.4,color="black",URL="$classprf_1_1ATetGroup.html",tooltip="Asymmetric Tetrahedral Group."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="prf::ATriGroup",height=0.2,width=0.4,color="black",URL="$classprf_1_1ATriGroup.html",tooltip="Assymetric Triangular group."];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="prf::DihedralGroup",height=0.2,width=0.4,color="black",URL="$classprf_1_1DihedralGroup.html",tooltip="The dihedral group or boomerang."];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="prf::HistidineTip",height=0.2,width=0.4,color="black",URL="$classprf_1_1HistidineTip.html",tooltip="Pentagon at the tip of the side chain of Histidine."];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="prf::MPhenylGroup",height=0.2,width=0.4,color="black",URL="$classprf_1_1MPhenylGroup.html",tooltip="Modified Phenyl Group."];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="prf::PhenylGroup",height=0.2,width=0.4,color="black",URL="$classprf_1_1PhenylGroup.html",tooltip="Represents the phenyl ring with attached hydrogens."];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="prf::TetrahedralGroup",height=0.2,width=0.4,color="black",URL="$classprf_1_1TetrahedralGroup.html",tooltip="The Tetrahedral group."];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="prf::TrigonalGroup",height=0.2,width=0.4,color="black",URL="$classprf_1_1TrigonalGroup.html",tooltip="A Node with two out-going bonds."];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="prf::TryptophanTip",height=0.2,width=0.4,color="black",URL="$classprf_1_1TryptophanTip.html",tooltip="Tip of the side chain of Tryptophan."];
+}

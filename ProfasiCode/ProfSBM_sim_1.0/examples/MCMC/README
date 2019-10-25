@@ -1,0 +1,10 @@
+This directory contains a bare-bones program that runs a simple Markov
+Chain Monte Carlo simulation using PROFASI. The sequence and the
+temperature are adjustible from the command line, as are the variables
+such as length of the simulation, frequency of writes ... Use the 
+program without an argument to see a short list of option, and with
+"--help" for a more detailed description. 
+
+To compile, type make. 
+
+

@@ -1,0 +1,70 @@
+# Set the verbosity level of the messages in the log file
+
+log_level 10
+
+# Add a chain to the population from a pdb file
+# The syntax is, add_chain_pdb howmany what
+# In this example, the chain A from model 1 of the PDB file 1RIJ.pdb
+# is selected. One can select also a part of a chain, for instance
+# by writing, add_chain_pdb 1 1RIJ.pdb:1:A,2,20
+# The residue ranges when used in connection with selections from 
+# PDB files are expected to be given exactly as they appear in the 
+# PDB files. So, if a PDB file begins with residue 37, and you want
+# to start from the second residue in that file, you would write
+# add_chain_pdb 1 that.pdb:1:A,38,55
+
+add_chain_pdb 1 1RIJ.pdb:1:A
+
+# Number of temperatures. Used by simulated tempering, simulated annealing
+# and parallel tempering. Parallel tempering and simulated annealing can
+# use schema files to infer details about temperatures used. If such a file
+# is in use, ntmp value would be ignored. 
+
+ntmp 8
+
+# Maximum and minimum temperatures. Again, parallal tempering and simulated
+# annealing might ignore them, if a schema file is in use. 
+
+tmin 274 Kelvin
+tmax 374 Kelvin
+
+# Create an RMSD observable quantity. Look in the PROFASI tutorials for 
+# what observables you can create and how. Here we create a backbone+Cbeta
+# RMSD measurement over all residues of 1RIJ...
+
+new_obs ProteinRMSD bbcb using +BB+CB; struc1 1RIJ.pdb:1:A ; struc2 $::A
+
+# Specify the length of a Monte Carlo cycle. The value -1 is interpreted
+# as an instruction to use the number of degrees of freedom as the 
+# cycle length. 
+
+steps_per_cycle -1
+
+# Total number of Monte Carlo cycles to perform
+
+mccyc 10000
+
+# Number of thermalization cycles, which are ignored for histograms. 
+
+ntherm 3000
+
+# Frequency of estimation and writing of averages.
+
+iavg 1000
+
+# Frequency of writing into the runtime-history file "rt"
+
+nrt 1000
+
+# Frequency of writing program configuration to disk
+
+iconf 1000
+
+# Instruction to redirect standard output and standard error to
+# files "stdout" and "stderr" in the output directory. Useful
+# if you have a run on 500 processors. This demangles the output
+# cleanly.
+
+stdout_redirect on
+stderr_redirect on
+

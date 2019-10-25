@@ -1,0 +1,136 @@
+Queueing up 1 copies of chain < MET GLU ALA VAL ASP ALA ASN SER LEU ALA GLN ALA LYS GLU ALA ALA ILE LYS GLU LEU LYS GLN TYR GLY ILE GLY ASP TYR TYR ILE LYS LEU ILE ASN ASN ALA LYS THR VAL GLU GLY VAL GLU SER LEU LYS ASN GLU ILE LEU LYS ALA LEU PRO THR GLU  >
+Population> Contents ...
+Chain 0:   * MEAVDANSLAQAKEAAIKELKQYGIGDYYIKLINNAKTVEGVESLKNEILKALPTE *   (56 residues, 878 atoms.)
+Total number of atoms = 878
+Population> DOF index is clean.
+Population> InitCoord : (random)
+Population> Random initial conformation.
+Created interaction potential. Summary: 
+Force field name FF
+Number of terms 9
+0: ExVol
+1: LocExVol
+2: Bias
+3: TorsionTerm
+4: HBMM
+5: HBMS
+6: Hydrophobicity
+7: ChargedSCInteraction
+8: NativeRestraints
+
+*** init_ff:Tmix=0.000000
+
+*** init_ff:SbmToMix=
+
+*** init_ff:scaleSBM=1.000000
+
+*** init_ff:mixtype=1
+
+*** init_ff:cationpi=1.000000
+
+MC> force field summary...
+Force field name FF
+Number of terms 9
+0: ExVol
+1: LocExVol
+2: Bias
+3: TorsionTerm
+4: HBMM
+5: HBMS
+6: Hydrophobicity
+7: ChargedSCInteraction
+8: NativeRestraints
+File updateprob.dat with update probabilities could not be opened. Update probabilities will not be read in from a file.
+Using automatic probability setup for 32 temperatures and 3 updates.
+Fractions of rot, bb, and rigid dof are 0.574545, 0.403636, 0.021818
+Based on the information about the population and the 
+updates used, the following probability matrix was calculated
+for update probabilities...
+probability values ...
+BGS: 0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.098002	0.113476	0.128950	0.144424	0.159898	0.175372	0.190846	0.206320	0.221794	0.237268	0.252742	0.268216	0.283690	0.299164	0.314638	0.330112	
+Rot: 0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	
+Pivot: 0.412639	0.412639	0.412639	0.412639	0.412639	0.412639	0.412639	0.412639	0.412639	0.412639	0.412639	0.412639	0.412639	0.412639	0.412639	0.412639	0.314638	0.299164	0.283690	0.268216	0.252742	0.237268	0.221794	0.206320	0.190846	0.175372	0.159898	0.144424	0.128950	0.113476	0.098002	0.082528	
+
+File updateprob.dat with update probabilities could not be opened. Update probabilities will not be read in from a file.
+Using automatic probability setup for 32 temperatures and 3 updates.
+Fractions of rot, bb, and rigid dof are 0.574545, 0.403636, 0.021818
+Based on the information about the population and the 
+updates used, the following probability matrix was calculated
+for update probabilities...
+probability values ...
+BGS: 0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.098002	0.113476	0.128950	0.144424	0.159898	0.175372	0.190846	0.206320	0.221794	0.237268	0.252742	0.268216	0.283690	0.299164	0.314638	0.330112	
+Rot: 0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	0.587361	
+Pivot: 0.412639	0.412639	0.412639	0.412639	0.412639	0.412639	0.412639	0.412639	0.412639	0.412639	0.412639	0.412639	0.412639	0.412639	0.412639	0.412639	0.314638	0.299164	0.283690	0.268216	0.252742	0.237268	0.221794	0.206320	0.190846	0.175372	0.159898	0.144424	0.128950	0.113476	0.098002	0.082528	
+
+Initializing observables and ObsHandler..
+ObsHandler> activating observable Etot
+ObsHandler> activating observable ExVol
+ObsHandler> activating observable LocExVol
+ObsHandler> activating observable Bias
+ObsHandler> activating observable TorsionTerm
+ObsHandler> activating observable HBMM
+ObsHandler> activating observable HBMS
+ObsHandler> activating observable Hydrophobicity
+ObsHandler> activating observable ChargedSCInteraction
+ObsHandler> activating observable NativeRestraints
+ObsHandler> activating observable Ego
+ObsHandler> activating observable rg
+RMSD_Utils> Created filter : is(CA)
+ProteinRMSD> Atom mappings...
+List 1 has size 56, and list 2 has size 56
+structure 1 (A/  1/MET/ CA /) matched to structure 2 (A/  0/MET/ CA /)
+structure 1 (A/  2/GLU/ CA /) matched to structure 2 (A/  1/GLU/ CA /)
+structure 1 (A/  3/ALA/ CA /) matched to structure 2 (A/  2/ALA/ CA /)
+structure 1 (A/  4/VAL/ CA /) matched to structure 2 (A/  3/VAL/ CA /)
+structure 1 (A/  5/ASP/ CA /) matched to structure 2 (A/  4/ASP/ CA /)
+structure 1 (A/  6/ALA/ CA /) matched to structure 2 (A/  5/ALA/ CA /)
+structure 1 (A/  7/ASN/ CA /) matched to structure 2 (A/  6/ASN/ CA /)
+structure 1 (A/  8/SER/ CA /) matched to structure 2 (A/  7/SER/ CA /)
+structure 1 (A/  9/LEU/ CA /) matched to structure 2 (A/  8/LEU/ CA /)
+structure 1 (A/ 10/ALA/ CA /) matched to structure 2 (A/  9/ALA/ CA /)
+structure 1 (A/ 11/GLN/ CA /) matched to structure 2 (A/ 10/GLN/ CA /)
+structure 1 (A/ 12/ALA/ CA /) matched to structure 2 (A/ 11/ALA/ CA /)
+structure 1 (A/ 13/LYS/ CA /) matched to structure 2 (A/ 12/LYS/ CA /)
+structure 1 (A/ 14/GLU/ CA /) matched to structure 2 (A/ 13/GLU/ CA /)
+structure 1 (A/ 15/ALA/ CA /) matched to structure 2 (A/ 14/ALA/ CA /)
+structure 1 (A/ 16/ALA/ CA /) matched to structure 2 (A/ 15/ALA/ CA /)
+structure 1 (A/ 17/ILE/ CA /) matched to structure 2 (A/ 16/ILE/ CA /)
+structure 1 (A/ 18/LYS/ CA /) matched to structure 2 (A/ 17/LYS/ CA /)
+structure 1 (A/ 19/GLU/ CA /) matched to structure 2 (A/ 18/GLU/ CA /)
+structure 1 (A/ 20/LEU/ CA /) matched to structure 2 (A/ 19/LEU/ CA /)
+structure 1 (A/ 21/LYS/ CA /) matched to structure 2 (A/ 20/LYS/ CA /)
+structure 1 (A/ 22/GLN/ CA /) matched to structure 2 (A/ 21/GLN/ CA /)
+structure 1 (A/ 23/TYR/ CA /) matched to structure 2 (A/ 22/TYR/ CA /)
+structure 1 (A/ 24/GLY/ CA /) matched to structure 2 (A/ 23/GLY/ CA /)
+structure 1 (A/ 25/ILE/ CA /) matched to structure 2 (A/ 24/ILE/ CA /)
+structure 1 (A/ 26/GLY/ CA /) matched to structure 2 (A/ 25/GLY/ CA /)
+structure 1 (A/ 27/ASP/ CA /) matched to structure 2 (A/ 26/ASP/ CA /)
+structure 1 (A/ 28/TYR/ CA /) matched to structure 2 (A/ 27/TYR/ CA /)
+structure 1 (A/ 29/TYR/ CA /) matched to structure 2 (A/ 28/TYR/ CA /)
+structure 1 (A/ 30/ILE/ CA /) matched to structure 2 (A/ 29/ILE/ CA /)
+structure 1 (A/ 31/LYS/ CA /) matched to structure 2 (A/ 30/LYS/ CA /)
+structure 1 (A/ 32/LEU/ CA /) matched to structure 2 (A/ 31/LEU/ CA /)
+structure 1 (A/ 33/ILE/ CA /) matched to structure 2 (A/ 32/ILE/ CA /)
+structure 1 (A/ 34/ASN/ CA /) matched to structure 2 (A/ 33/ASN/ CA /)
+structure 1 (A/ 35/ASN/ CA /) matched to structure 2 (A/ 34/ASN/ CA /)
+structure 1 (A/ 36/ALA/ CA /) matched to structure 2 (A/ 35/ALA/ CA /)
+structure 1 (A/ 37/LYS/ CA /) matched to structure 2 (A/ 36/LYS/ CA /)
+structure 1 (A/ 38/THR/ CA /) matched to structure 2 (A/ 37/THR/ CA /)
+structure 1 (A/ 39/VAL/ CA /) matched to structure 2 (A/ 38/VAL/ CA /)
+structure 1 (A/ 40/GLU/ CA /) matched to structure 2 (A/ 39/GLU/ CA /)
+structure 1 (A/ 41/GLY/ CA /) matched to structure 2 (A/ 40/GLY/ CA /)
+structure 1 (A/ 42/VAL/ CA /) matched to structure 2 (A/ 41/VAL/ CA /)
+structure 1 (A/ 43/GLU/ CA /) matched to structure 2 (A/ 42/GLU/ CA /)
+structure 1 (A/ 44/SER/ CA /) matched to structure 2 (A/ 43/SER/ CA /)
+structure 1 (A/ 45/LEU/ CA /) matched to structure 2 (A/ 44/LEU/ CA /)
+structure 1 (A/ 46/LYS/ CA /) matched to structure 2 (A/ 45/LYS/ CA /)
+structure 1 (A/ 47/ASN/ CA /) matched to structure 2 (A/ 46/ASN/ CA /)
+structure 1 (A/ 48/GLU/ CA /) matched to structure 2 (A/ 47/GLU/ CA /)
+structure 1 (A/ 49/ILE/ CA /) matched to structure 2 (A/ 48/ILE/ CA /)
+structure 1 (A/ 50/LEU/ CA /) matched to structure 2 (A/ 49/LEU/ CA /)
+structure 1 (A/ 51/LYS/ CA /) matched to structure 2 (A/ 50/LYS/ CA /)
+structure 1 (A/ 52/ALA/ CA /) matched to structure 2 (A/ 51/ALA/ CA /)
+structure 1 (A/ 53/LEU/ CA /) matched to structure 2 (A/ 52/LEU/ CA /)
+structure 1 (A/ 54/PRO/ CA /) matched to structure 2 (A/ 53/PRO/ CA /)
+structure 1 (A/ 55/THR/ CA /) matched to structure 2 (A/ 54/THR/ CA /)
+structure 1 (A/ 56/GLU/ CA /) matched to structure 2 (A/ 55/GLU/ CA /)

@@ -1,0 +1,14 @@
+digraph structs
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir=LR;
+  Node3 [label="PROFASI trajectory module",height=0.2,width=0.4,color="black",URL="$group__prf__trajectory.html",tooltip="Interface to trajectory files in PROFASI This module contains a set of classes to..."];
+  Node0 [label="Utilities",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 [label="ProFASi PDB handling module",height=0.2,width=0.4,color="black",URL="$group__pdb__handling.html"];
+  Node2 [label="ProFASi XML module",height=0.2,width=0.4,color="black",URL="$group__profasi__XML.html",tooltip="Basic XML parsing for ProFASi."];
+  Node0->Node1 [shape=plaintext, color="midnightblue", dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, color="midnightblue", dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, color="midnightblue", dir="back", style="solid"];
+}

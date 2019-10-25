@@ -1,0 +1,27 @@
+loglevel 3
+
+force_field FF=FF08+Extras:NativeRestraints(consensusGA.xml)+NativeRestraints(consensusGB.xml)
+scale_sbm 0.37
+
+add_chain_pdb 1 2FS1_clean_m1_min_rmsd.pdb::A
+box_length 200
+init_config random
+
+ntmp 32
+tmin 0.5
+tmax 0.7
+#tfile T.dat
+T_update_interval 5000
+
+rt_write_freq 1000
+conf_write_freq 1000
+avg_write_freq 1000
+ntherm 3000000
+num_cycles 10000000
+steps_per_cycle -1
+
+new_obs Rg rg
+new_obs ProteinRMSD rmsdA using +CA; struc1 2FS1_clean_m1_min_rmsd.pdb::A,1,56 ; struc2 $::A,1,56
+new_obs ProteinRMSD rmsdB using +CA; struc1 1PGA_min_rmsd.pdb::A,1,56 ; struc2 $::A,1,56
+new_obs NativenessQ QA structure 2FS1_clean_m1_min_rmsd.pdb::A,1,56
+new_obs NativenessQ QB structure 1PGA_min_rmsd.pdb::A,1,56

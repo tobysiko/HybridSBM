@@ -1,0 +1,106 @@
+#
+#   PROFASI: Protein Folding and Aggregation Simulator, Version 1.5
+#   Copyright (C) (2012)  Anders Irback and Sandipan Mohanty
+#   Email: profasi@thep.lu.se
+#   Home Page: http://cbbp.thep.lu.se/activities/profasi/
+#   Version control (git) : https://trac.version.fz-juelich.de/PROFASI
+
+#   This program is free software; you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License
+#   (see PROFASI/gpl.txt).
+
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+#
+
+# Top level Makefile for ProFASi. Options given here work fine for 
+# some modern high performance computing environments where we have
+# had a chance to test them. We have found that it does make a 
+# significant difference to the performance of the code to dig into
+# system specific compiler options. Once the user is familiar with
+# the use of this program, we encourage him/her to spend some time
+# exploring the effect of different optimization options available
+# in the compiler of choice for the particular computing environment. 
+
+# Last updated: 13 January 2012
+
+MAKE := make
+VERSION := 1.4.9
+NPROCS:=4 
+
+# BUILDTYPE could be "optimized" or "debug"
+BUILDTYPE := optimized
+
+# Reasonable compiler options for g++, Intel C++ compiler, IBM xlC and 
+# Portland Group's pgCC compiler are automatically chosen if you pass,
+# for example, a command line option CC=icc. 
+CC:=g++
+MPICC:=mpicxx
+
+ORD:=obj
+ifeq ($(BUILDTYPE),debug)
+ORD:=dbg
+endif
+
+InstallDir:=$(PWD)/installs#/$(shell git branch | grep '*' | sed -e 's/* //g')
+IncludeDir:=$(InstallDir)/include/PROFASI
+LibDir:=$(InstallDir)/lib
+BinDir:=$(InstallDir)/bin
+
+MODULES := AA Algorithms Aux Elements EndGroups Energy Energy/Extras Observables Updates
+objtree:=$(patsubst %,model/$(ORD)/%,$(MODULES))
+versionfile:=model/Aux/profasi_version.cc
+.PHONY: 
+
+all : $(versionfile) dirs libs apps
+
+parallel: parlibs parapps
+
+model/Aux/profasi_version.cc:
+	bin/version_stamp.pl
+
+dirs: $(objtree) model/lib app/bin
+
+$(objtree) model/lib app/bin:
+	mkdir -p $@
+
+libs:
+	$(MAKE) --directory=model -j $(NPROCS) VERSION="$(VERSION)" CC="$(CC)" ORD="$(ORD)" \
+	BUILDTYPE="$(BUILDTYPE)" all
+apps:
+	$(MAKE) --directory=app -j $(NPROCS) VERSION="$(VERSION)" CC="$(CC)" \
+	BUILDTYPE="$(BUILDTYPE)" all
+
+
+parlibs:
+	$(MAKE) --directory=model -j $(NPROCS) VERSION="$(VERSION)" CC="$(CC)" MPICC="$(MPICC)" \
+	BUILDTYPE="$(BUILDTYPE)" ORD="$(ORD)" parallel
+parapps:
+	$(MAKE) --directory=app -j $(NPROCS) VERSION="$(VERSION)" CC="$(CC)"  MPICC="$(MPICC)" \
+	BUILDTYPE="$(BUILDTYPE)" parallel
+
+clean:
+	for i in model app; do \
+	$(MAKE) --directory=$${i} ORD="$(ORD)" VERSION="$(VERSION)" clean; \
+	done
+	rm model/Aux/profasi_version.cc
+
+#Clean the usual stuff, but also remove backup files created by editors
+superclean:
+	for i in model app; do \
+	$(MAKE) --directory=$${i} ORD="$(ORD)" VERSION="$(VERSION)" superclean; \
+	done
+install:
+	if [ ! -d $(IncludeDir) ];then mkdir -p $(IncludeDir);fi
+	if [ ! -d $(LibDir) ];then mkdir -p $(LibDir);fi
+	if [ ! -d $(BinDir) ];then mkdir -p $(BinDir);fi
+	for i in model app ; do \
+	$(MAKE) --directory=$${i} VERSION="$(VERSION)"  IncludeDir="$(IncludeDir)" \
+	LibDir="$(LibDir)" BinDir="$(BinDir)" BUILDTYPE="$(BUILDTYPE)" ORD="$(ORD)" install;\
+	done
+
+docs:
+	doxygen doc/Doxyfile
+

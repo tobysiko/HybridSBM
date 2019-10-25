@@ -1,0 +1,37 @@
+To compile ProFASi, type
+
+make CC=g++/icc/xlC/pgCC
+make CC=g++/icc/xlC/pgCC parallel
+make install
+
+Chose one of the 4 compilers for the "CC=__" option passed to make. Use the same
+compiler for the compilation of the parallel part.
+
+To compile a debugging version, you should pass the additional option 
+BUILDTYPE=debug to the make commands above. The debugging and optimized versions
+can exist side by side. The object files are written in separate directories and
+the executables are given special extensions (".dbg" or ".mdb") for the debugging
+versions.
+
+To compile a local version of the documentation (you should definitely do this!)
+type,
+
+make docs
+
+The documentation is built into the directory doc/html/ inside ProFASi's main
+directory.
+
+The "make install" only creates bin and include subdirectories inside the
+directory installs. You don't need administrator priviledges for it. It creates some
+symbolic links useful for compilation of external programs using the ProFASi
+library, and puts the executables in a place where they are not touched until
+you run make install again.
+
+If git is the version control system for PROFASI, "make install" creates a
+sub-directory with the name of the active git branch, and installs the binaries
+and headers into that directory. So, if you want to switch to a new branch and
+want to compare the results of the executables generated with the new branch
+and the old branch, you should run "make install" in the old branch before
+changing branch.
+
+

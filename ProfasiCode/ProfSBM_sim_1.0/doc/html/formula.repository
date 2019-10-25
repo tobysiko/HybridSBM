@@ -1,0 +1,15 @@
+\form#0:$ f(\theta)= \frac{\exp(\kappa \cos(\theta-\mu))}{2\pi I_0 (\kappa)} $
+\form#1:$I_0$
+\form#2:$ f(\theta)=N \left( 1 - \frac{\exp(\kappa \cos(\theta-\mu))}{\exp(\kappa)} \right) $
+\form#3:$C_\alpha$
+\form#4:$N-C_{\alpha}$
+\form#5:$\beta_i$
+\form#6:$\beta_0 < \beta_1 < ...$
+\form#7:$\exp(-(\Delta \beta E + \Delta g))$
+\form#8:$\Delta \beta $
+\form#9:$\Delta g$
+\form#10:$\alpha$
+\form#11:$\beta = \frac{1}{k_B T} $
+\form#12:$ \alpha $
+\form#13:$ \beta $
+\form#14:$ \mathbf{A\beta_{16-22}} $

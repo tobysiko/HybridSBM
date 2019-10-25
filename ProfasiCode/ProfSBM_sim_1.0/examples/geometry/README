@@ -1,0 +1,15 @@
+Simple program to take a sequence of three or more amino acids and
+dump a pdb file where the chain is completely stretched. This is
+useful to check the geometrical parameters of different groups in
+PROFASi, but also if one needs a quick pdb file of a single residue.
+
+To compile, type make.
+
+Usage example:
+
+geometry.ex "GLY LYS GLY" -o lys.pdb
+
+Note: The minimum sequence length that works is 3. So, if you are
+just interested in the geometry of Lysine, please two Glycine 
+residues as padding on both sides. 
+

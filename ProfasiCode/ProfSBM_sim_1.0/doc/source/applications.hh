@@ -1,0 +1,9 @@
+/**
+ \page prf_scripts Scripts
+
+The top level bin directory in PROFASI also contains a few scripts we have found very useful.
+\li \b find_avg.pl : This is a PERL script to process the averages files produced by the PROFASI simulation programs. There are no arguments to this script. Simply type the name of the program (with PATH) in the run directory. It looks for files called "n0/averages", "n1/averages", ... and combines the information from all such files into global averages. But then it also splits the global averages data into many files, one for each measurement, convenient for plotting. So, after running the script, it will produce "Etot.avg", "Bias.avg" ,... Each file contains a comment line at the top describing what is written in that file.
+
+\li \b build_grouplib.py (Warning: advanced users only!!): This is a PYTHON script that may be useful for some advanced users. It is used to create the class files GroupLib.hh and GroupLib.cc, from a simple description of the amino acids and other groups which are parts of PROFASI. If, for instance, you want your version of PROFASI to handle Hydroxy-proline, you will start the implementation of the class by adding a few lines for Hydroxy-proline in the "residue_info.dat" file in the model directory, and then running build_grouplib.py. This will generate a new GroupLib class, and you copy the ".hh" and ".cc" files into PROFASI/model/Elements . Most of the book keeping about atom orders, writing PDB files etc, is then already done! You will only need to add a small hydroxyproline class definition, by following what is done for proline and making small modifications. If your new addition has special properties with respect to particular energy terms, you would need to make changes in the energy classes. Take a look, in particular, in PROFASI/model/Energy/Hydrophobicity.cc.
+
+*/

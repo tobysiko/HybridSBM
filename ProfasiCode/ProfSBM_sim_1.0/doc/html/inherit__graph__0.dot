@@ -1,0 +1,18 @@
+digraph G
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="BasicMCRun",height=0.2,width=0.4,color="black",URL="$classBasicMCRun.html",tooltip="Constant temperature Monte Carlo simulations."];
+  Node1 -> Node2 [dir=back,color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="ParTempRun",height=0.2,width=0.4,color="black",URL="$classParTempRun.html",tooltip="Parallel tempering class."];
+  Node1 -> Node3 [dir=back,color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="Retrace",height=0.2,width=0.4,color="black",URL="$classRetrace.html",tooltip="A program to retrace the path of an individual replica of parallel tempering."];
+  Node1 -> Node4 [dir=back,color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="SimAnnealRun",height=0.2,width=0.4,color="black",URL="$classSimAnnealRun.html",tooltip="Simulated annealing."];
+  Node1 -> Node5 [dir=back,color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="SimTempRun",height=0.2,width=0.4,color="black",URL="$classSimTempRun.html",tooltip="Simulated tempering with profasi."];
+  Node1 -> Node6 [dir=back,color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="WLRun",height=0.2,width=0.4,color="black",URL="$classWLRun.html",tooltip="Monte Carlo simulations with the Wang Landau method."];
+}

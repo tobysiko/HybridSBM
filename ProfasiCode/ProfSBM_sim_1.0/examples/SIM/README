@@ -1,0 +1,8 @@
+Set up real simulations for some simple systems. Here we have
+examples of a single chain system, and a multi-chain system.
+Observe the contents of the settings files and the other 
+files provided in these directories. No make file is needed.
+The programs to run can be found in the app directory, and
+are compiled with the rest of PROFASI. 
+
+

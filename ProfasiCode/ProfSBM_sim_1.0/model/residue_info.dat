@@ -1,0 +1,244 @@
+% NONE X Ghost NON unnatural things
+atoms {
+"XXXX"
+}
+#
+
+% G G Glycine GLY natural aminoacid
+atoms {
+" N  "," H  "," CA ","1HA ","2HA "," C  "," O  "
+}
+#
+
+% A A Alanine ALA natural hydrophobic aminoacid
+atoms {
+" N  "," H  "," CA "," HA "," CB ","1HB ","2HB ","3HB "," C  "," O  "
+}
+side_chain_dof 0 0 2 4 5
+#
+
+% V V Valine VAL natural hydrophobic aminoacid
+atoms {
+" N  "," H  "," CA "," HA "," CB "," HB "," CG1"," CG2",
+"1HG1","2HG1","3HG1","1HG2","2HG2","3HG2"," C  "," O  "
+}
+side_chain_dof 0 0 2 4 6
+side_chain_dof 1 2 4 6 8
+side_chain_dof 2 2 4 7 11
+#
+
+% L L Leucine LEU natural hydrophobic aminoacid
+atoms {
+" N  "," H  "," CA "," HA "," CB ","1HB ","2HB "," CG ",
+" HG "," CD1"," CD2","1HD1","2HD1","3HD1","1HD2","2HD2",
+"3HD2"," C  "," O  "
+}
+side_chain_dof 0 0 2 4 7
+side_chain_dof 1 2 4 7 9
+side_chain_dof 2 4 7 9 11
+side_chain_dof 3 4 7 10 14
+#
+
+% I I Isoleucine ILE natural hydrophobic aminoacid
+atoms {
+" N  "," H  "," CA "," HA "," CB "," HB "," CG1"," CG2",
+"1HG2","2HG2","3HG2","1HG1","2HG1"," CD1","1HD1","2HD1",
+"3HD1"," C  "," O  "
+}
+side_chain_dof 0 0 2 4 6
+side_chain_dof 1 2 4 6 13
+side_chain_dof 2 2 4 7 8
+side_chain_dof 3 4 6 13 14
+#
+
+% S S Serine SER natural aminoacid
+atoms {
+" N  "," H  "," CA "," HA "," CB ","1HB ","2HB "," OG ",
+" HG "," C  "," O  "
+}
+side_chain_dof 0 0 2 4 7
+side_chain_dof 1 2 4 7 8
+#
+
+% T T Threonine THR natural aminoacid
+atoms {
+" N  "," H  "," CA "," HA "," CB "," HB "," OG1"," CG2",
+"1HG2","2HG2","3HG2"," HG1"," C  "," O  "
+}
+side_chain_dof 0 0 2 4 6
+side_chain_dof 1 2 4 6 11
+side_chain_dof 2 2 4 7 8
+#
+
+% C C Cysteine CYS natural aminoacid
+atoms {
+" N  "," H  "," CA "," HA "," CB ","1HB ","2HB "," SG ",
+" HG "," C  "," O  "
+}
+side_chain_dof 0 0 2 4 7
+side_chain_dof 1 2 4 7 8
+#
+
+% M M Methionine MET natural hydrophobic aminoacid
+atoms {
+" N  "," H  "," CA "," HA "," CB ","1HB ","2HB "," CG ",
+"1HG ","2HG "," SD "," CE ","1HE ","2HE ","3HE "," C  "," O  "
+}
+side_chain_dof 0 0 2 4 7
+side_chain_dof 1 2 4 7 10
+side_chain_dof 2 4 7 10 11
+side_chain_dof 3 7 10 11 12
+#
+
+% P P Proline PRO natural hydrophobic aminoacid
+atoms {
+" N  "," CA "," HA "," CB ","1HB ","2HB "," CG ",
+"1HG ","2HG "," CD ","1HD ","2HD "," C  "," O  "
+}
+#
+
+% D D Aspartic_acid ASP natural charged aminoacid
+atoms {
+" N  "," H  "," CA "," HA "," CB ","1HB ","2HB "," CG ",
+" OD1"," OD2"," C  "," O  "
+}
+side_chain_dof 0 0 2 4 7
+side_chain_dof 1 2 4 7 8
+#
+
+% N N Asparagine ASN natural aminoacid
+atoms {
+" N  "," H  "," CA "," HA "," CB ","1HB ","2HB "," CG ",
+" OD1"," ND2","1HD2","2HD2"," C  "," O  "
+}
+side_chain_dof 0 0 2 4 7
+side_chain_dof 1 2 4 7 8
+#
+
+% E E Glutamic_acid GLU natural charged aminoacid
+atoms {
+" N  "," H  "," CA "," HA "," CB ","1HB ","2HB "," CG ",
+"1HG ","2HG "," CD "," OE1"," OE2"," C  "," O  "
+}
+side_chain_dof 0 0 2 4 7
+side_chain_dof 1 2 4 7 10
+side_chain_dof 2 4 7 10 11
+#
+
+% Q Q Glutamine GLN natural aminoacid
+atoms {
+" N  "," H  "," CA "," HA "," CB ","1HB ","2HB "," CG ",
+"1HG ","2HG "," CD "," OE1"," NE2","1HE2","2HE2"," C  "," O  "
+}
+side_chain_dof 0 0 2 4 7
+side_chain_dof 1 2 4 7 10
+side_chain_dof 2 4 7 10 11
+#
+
+% K K Lysine LYS natural charged aminoacid
+atoms {
+" N  "," H  "," CA "," HA "," CB ","1HB ","2HB "," CG ",
+"1HG ","2HG "," CD ","1HD ","2HD "," CE ","1HE ","2HE ",
+" NZ ","1HZ ","2HZ ","3HZ "," C  "," O  "
+}
+side_chain_dof 0 0 2 4 7
+side_chain_dof 1 2 4 7 10
+side_chain_dof 2 4 7 10 13
+side_chain_dof 3 7 10 13 16
+side_chain_dof 4 10 13 16 17
+#
+
+% R R Arginine ARG natural charged aminoacid
+atoms {
+" N  "," H  "," CA "," HA "," CB ","1HB ","2HB "," CG ",
+"1HG ","2HG "," CD ","1HD ","2HD "," NE "," HE "," CZ ",
+" NH1","1HH1","2HH1"," NH2","1HH2","2HH2"," C  "," O  "
+}
+side_chain_dof 0 0 2 4 7
+side_chain_dof 1 2 4 7 10
+side_chain_dof 2 4 7 10 13
+side_chain_dof 3 7 10 13 15
+#
+
+% H H Histidine HIS natural aminoacid
+atoms {
+" N  "," H  "," CA "," HA "," CB ","1HB ","2HB "," CG ",
+" CD2"," NE2"," CE1"," ND1"," HD2"," HE1"," HD1"," C  "," O  "
+}
+side_chain_dof 0 0 2 4 7
+side_chain_dof 1 2 4 7 8
+#
+
+% F F Phenylalanine PHE natural hydrophobic aminoacid
+atoms {
+" N  "," H  "," CA "," HA "," CB ","1HB ","2HB "," CG ",
+" CD1"," CE1"," CZ "," CE2"," CD2"," HD1"," HE1"," HZ ",
+" HE2"," HD2"," C  "," O  "
+}
+side_chain_dof 0 0 2 4 7
+side_chain_dof 1 2 4 7 8
+#
+
+% Y Y Tyrosine TYR natural hydrophobic aminoacid
+atoms {
+" N  "," H  "," CA "," HA "," CB ","1HB ","2HB "," CG ",
+" CD1"," CE1"," CZ "," CE2"," CD2"," HD1"," HE1"," OH ",
+" HE2"," HD2"," HH "," C  "," O  "
+}
+side_chain_dof 0 0 2 4 7
+side_chain_dof 1 2 4 7 8
+side_chain_dof 2 9 10 15 18
+#
+
+% W W Tryptophan TRP natural hydrophobic aminoacid
+atoms {
+" N  "," H  "," CA "," HA "," CB ","1HB ","2HB "," CG ",
+" CD1"," NE1"," CE2"," CD2"," CE3"," CZ3"," CH2"," CZ2",
+" HD1"," HE1"," HE3"," HZ3"," HH2"," HZ2"," C  "," O  "
+}
+side_chain_dof 0 0 2 4 7
+side_chain_dof 1 2 4 7 8
+#
+
+% DPR p D-Proline DPR synthetic hydrophobic aminoacid
+atoms {
+" N  "," CA "," HA "," CB ","1HB ","2HB "," CG ",
+"1HG ","2HG "," CD ","1HD ","2HD "," C  "," O  "
+}
+#
+
+% ACE X Acetyl ACE N-terminal endgroup
+atoms {
+" C  "," O  "," CH3","1H  ","2H  ","3H  "
+}
+side_chain_dof 0 6 0 2 3
+#
+
+% NH2 X Amide NH2 C-terminal endgroup
+atoms {
+" N  ","1HN ","2HN "
+}
+#
+
+% SUC X Succinyl SUC N-terminal endgroup
+atoms {
+" CO "," O  "," C3 ","1H3 ","2H3 "," C2 ","1H2 ","2H2 "," CO2",
+" O11"," O12"
+}
+side_chain_dof 0 11 0 2 3
+side_chain_dof 1 0 2 5 6
+side_chain_dof 2 2 5 8 9
+#
+
+% NME X NMethyl NME C-terminal endgroup
+atoms {
+" N  "," H  "," CH3","1H  ","2H  ","3H  "
+}
+side_chain_dof 0 -1 0 2 3
+#
+
+% VOIDEG X VoidEG  ___ Blank endgroup
+atoms {
+}
+#
+

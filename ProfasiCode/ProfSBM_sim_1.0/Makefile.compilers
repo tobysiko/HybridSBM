@@ -1,0 +1,101 @@
+#
+#   PROFASI: Protein Folding and Aggregation Simulator, Version 1.5
+#   Copyright (C) (2012)  Anders Irback and Sandipan Mohanty
+#   Email: profasi@thep.lu.se
+#   Home Page: http://cbbp.thep.lu.se/activities/profasi/
+#   Version control (git) : https://trac.version.fz-juelich.de/PROFASI
+
+#   This program is free software; you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License
+#   (see PROFASI/gpl.txt).
+
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+#
+
+# Compilers and options 
+# If your compiler is g++, Intel icc, IBM XL C or Portland Gropu's pgCC
+# the reasonable compiler flags will be chosen automatically with the 
+# following conditional statements. If not, you will also have to edit
+# the CFLAG options manually. 
+
+CPUTYPE?=$(shell cat /proc/cpuinfo | grep "vendor_id" | awk '{print $$3;}' | head -n 1)
+BUILDTYPE?=optimized
+
+# Recommended compiler options for Intel icc compiler
+ifeq ($(CC),icc)
+ifeq ($(BUILDTYPE),optimized)
+ifeq ($(strip $(CPUTYPE)),GenuineIntel)
+CFLAGS:=-fast -fno-exceptions -w1
+else 
+CFLAGS:=-O3 -static -ipo -fno-exceptions -w1
+endif
+MPICCFLAGS:=-O3 -ipo -w1
+else
+CFLAGS:=-g3 -O0 -w1 
+MPICCFLAGS:=-g3 -O0 -w1
+endif 
+# It is important to use Intel's xiar to build the library to
+# benefit fully from the optimization options given here.
+AR:=xiar
+ZLIB:=-Bdynamic -lz
+endif
+
+# Recommended compiler options for GNU g++ compiler
+ifeq ($(CC),g++)
+ifeq ($(BUILDTYPE),optimized)
+CFLAGS:=-O3 -pedantic -Wall
+else 
+CFLAGS:=-O0 -g3 -pedantic -Wall
+endif 
+MPICCFLAGS:=$(CFLAGS)
+endif
+
+# Recommended compiler options for Portland Groups compiler suite
+ifeq ($(CC),pgCC)
+ifeq ($(BUILDTYPE),optimized)
+CFLAGS:=-fast --no_exceptions -Minline=levels:10
+else 
+CFLAGS:=-g
+endif 
+MPICCFLAGS:=$(CFLAGS)
+endif
+
+# Recommended compiler options for IBM xlC compiler
+ifeq ($(CC),xlC)
+ifeq ($(BUILDTYPE),optimized)
+CFLAGS:=-O3 -qhot
+else 
+CFLAGS:=-g3
+endif 
+MPICCFLAGS:=$(CFLAGS)
+endif
+
+# Recommended compiler options for IBM bgxlC (BlueGene) compiler
+ifeq ($(CC),bgxlC)
+ifeq ($(BUILDTYPE),optimized)
+CFLAGS:=-O3 -qhot
+else 
+CFLAGS:=-g3
+endif 
+MPICC:=/bgsys/drivers/ppcfloor/comm/bin/mpixlcxx
+MPICCFLAGS:=$(CFLAGS)
+endif
+
+# On some systems the mpicc compiler does not automatically enable the c++
+# interface for MPI. In that case you end up with lots of errors relating to
+# MPI. Try uncommenting the following line if that happens. You may need to
+# explore how exactly the c++ bindings should be enabled on your system.
+#
+# MPICH2 developers have wisely decided to leave a name clash with stdio.h
+# for the three symbols SEEK_SET, SEEK_CUR, and SEEK_END. Why they can not
+# choose another set of names beats us. As of version 1.0.1, the include
+# order for mpi.h has been changed at all occurences in PROFASI to get around
+# the issue. We are at the moment unaware of any unpleasant side effects of
+# this or of using the IGNORE_CXX_SEEK option in PROFASI.
+
+MPICCFLAGS += -DMPICH_IGNORE_CXX_SEEK
+MPICCFLAGS += -DMPI_CPP_BINDINGS
+

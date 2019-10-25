@@ -1,0 +1,15 @@
+This is a simple program that prints Gaussian random numbers to the standard output.
+The mean and standard deviation can be controlled by command line parameters.
+
+This is about as simple an example as one can construct illustrating how some 
+classes of PROFASI might be used to make an application doing something sensible. 
+It illustrates the use of ProgUtils class that is used across most PROFASI applications
+to handle command line arguments. 
+
+To compile, type "make". If you have compiled PROFASI with a different compiler than 
+g++, type "make CC=that_compiler" instead. 
+
+Type the name of the generated executable file, ran_example.ex, to get some usage 
+information.
+
+

@@ -1,0 +1,16 @@
+digraph "Graphical Class Hierarchy"
+{
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="prf::ContactFunction",height=0.2,width=0.4,color="black",URL="$classprf_1_1ContactFunction.html",tooltip="A boolean function object class on Contacts."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="prf::CaContact",height=0.2,width=0.4,color="black",URL="$classprf_1_1CaContact.html",tooltip="A simple contact function based on Calpha separation."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="prf::HBContact",height=0.2,width=0.4,color="black",URL="$classprf_1_1HBContact.html",tooltip="A ContactFunction based on hydrogen bonds."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="prf::HPContact",height=0.2,width=0.4,color="black",URL="$classprf_1_1HPContact.html",tooltip="A Contact function for Hydrophobic contacts."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="prf::Proximity",height=0.2,width=0.4,color="black",URL="$classprf_1_1Proximity.html",tooltip="A ContactFunction based on spatial proximity."];
+}
